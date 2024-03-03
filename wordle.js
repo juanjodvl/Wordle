@@ -38,12 +38,12 @@ function intentar(){
             row.appendChild(span)
         }
         grid.appendChild(row)
-        intentos --
-        if (intentos == 0){
+        if ((intentos == 0) && (pal !== palabra)){
             boton_intentar.style.backgroundColor = "red"
             let mensaje = fin("<h1>¡HAS PERDIDO!</h1>")
             boton_reiniciar.style.display = "block"
         }
+        intentos --
     }else{
         document.getElementById("input").value = ""
         document.getElementById("error").style.display = "block"
